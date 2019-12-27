@@ -40,6 +40,11 @@ export default class ScrollWrapper extends Vue {
     this.scroll.on("pullingUp", () => {
       this.$emit("pullingUp");
     });
+
+    // 监听滚动的位置
+    this.scroll.on("scroll", (position: any) => {
+      this.$emit("scroll", position);
+    });
   }
   activated() {
     this.enable();
@@ -83,5 +88,5 @@ export default class ScrollWrapper extends Vue {
 }
 </script>
 
-<style lang="less" scoped>
+<style scoped>
 </style>

@@ -33,6 +33,13 @@ h1.title {
     margin-top: 10px;
 }
 
+.main .main-list {
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .shili-box {
     display: flex;
 }
@@ -80,7 +87,8 @@ button.title:hover::after {
 }
 
 
-#props {
+#props,
+#methods {
     padding-left: 20px;
     margin-bottom: 20px;
 }

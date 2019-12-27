@@ -6,10 +6,241 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="./style/reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 
 <body>
-    <h1>扛狼</h1>
+    <h1 class="title">Vue移动端封装组件库</h1>
+    <div class="box">
+
+        <ul class="menu-list">
+            <li><a href="#grid-view">GridView(栅格布局)</a></li>
+            <li><a href="#swiper">swiper(轮播图)</a></li>
+            <li><a href="#scroll">scroll(封装better-scroll)</a></li>
+            <li><a href="#scroll-nav-bar">scrollNavbar(导航横向滚动)</a></li>
+        </ul>
+
+        <main class="main">
+            <div class="main-list">
+                <button id="grid-view" class="title">grid-view</button>
+                <div class="grid-view">
+                    <code class="shili-box">
+                        <div class="shili">
+                            <p>示例代码:</p> <img src="./img/gridview/示例代码.png" alt="示例代码">
+                        </div>
+                        <div class="shili">
+                            <p>示例效果：</p> <img src="./img/gridview/示例效果.png" alt="示例效果">
+                        </div>
+                    </code>
+                    <h4 id="props">Props</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>说明</th>
+                                <th>类型</th>
+                                <th>可选值</th>
+                                <th>默认值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>cols</td>
+                                <td>列数</td>
+                                <td>Number</td>
+                                <td>-</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>hMargin</td>
+                                <td>GridView内边距（padding-left/right）</td>
+                                <td>Number</td>
+                                <td>-</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>vMargin</td>
+                                <td>GridView内边距（padding-top/bottom）</td>
+                                <td>Number</td>
+                                <td>-</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>itemSpace</td>
+                                <td>插槽元素（margin-right）</td>
+                                <td>Number</td>
+                                <td>-</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>lineSpace</td>
+                                <td>插槽元素行距离（margin-right）</td>
+                                <td>Number</td>
+                                <td>-</td>
+                                <td>8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="main-list">
+                <button id="swiper" class="title">swiper</button>
+                <div class="swiper">
+                    <code class="shili-box">
+                        <div class="shili">
+                            <p>示例代码:</p> <img src="./img/swiper/示例代码.png" alt="示例代码">
+                        </div>
+                        <div class="shili">
+                            <p>示例效果：</p> <img src="./img/swiper/示例效果.gif" alt="示例效果">
+                        </div>
+                    </code>
+                    <h4 id="props">Props</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>说明</th>
+                                <th>类型</th>
+                                <th>可选值</th>
+                                <th>默认值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>interval</td>
+                                <td>切换的时间间隔，单位为毫秒</td>
+                                <td>Number</td>
+                                <td>-</td>
+                                <td>1500</td>
+                            </tr>
+                            <tr>
+                                <td>animDuration</td>
+                                <td>切换时所需要完成的时间，单位为毫秒</td>
+                                <td>Number</td>
+                                <td>-</td>
+                                <td>300</td>
+                            </tr>
+                            <tr>
+                                <td>moveRatio</td>
+                                <td>手滑移动指数切换（超过指数即对应切换）</td>
+                                <td>Number</td>
+                                <td>0~1</td>
+                                <td>0.25</td>
+                            </tr>
+                            <tr>
+                                <td>showIndicator</td>
+                                <td>是否显示正下方光标</td>
+                                <td>Boolean</td>
+                                <td>true | false</td>
+                                <td>true</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="main-list">
+                <button id="scroll" class="title">scroll</button>
+                <div class="scroll">
+                    <code class="shili-box">
+                        <div class="shili">
+                            <p>示例代码:</p> <img src="./img/swiper/示例代码.png" alt="示例代码">
+                        </div>
+                        <div class="shili">
+                            <p>示例效果：</p> <img src="./img/scroll/示例效果.gif" alt="示例效果">
+                        </div>
+                    </code>
+                    <h4 id="props">Props</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>说明</th>
+                                <th>类型</th>
+                                <th>可选值</th>
+                                <th>默认值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>probeType</td>
+                                <td>监听滚动的位置</td>
+                                <td>Number</td>
+                                <td>0 :不监听滚动的位置 ，1：超过一段时间监听 ， 2：滚动时监听 ， 3：实时监听（滚动结束后的惯性滚动依然监听）</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>direction</td>
+                                <td>滚动方向</td>
+                                <td>String</td>
+                                <td>vertical：纵向 | horizontal：横向</td>
+                                <td>vertical</td>
+                            </tr>
+                            <tr>
+                                <td>freeScroll</td>
+                                <td>是否同时支持X轴和Y轴的滚动</td>
+                                <td>Boolean</td>
+                                <td>true | false</td>
+                                <td>flase</td>
+                            </tr>
+                            <tr>
+                                <td>pullUpLoad</td>
+                                <td>是否开启上拉加载更多功能</td>
+                                <td>Boolean</td>
+                                <td>true | false</td>
+                                <td>false</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 id="methods">Methods</h4>
+
+                </div>
+            </div>
+
+            <div class="main-list">
+                <button id="scroll-nav-bar" class="title"></button>
+                <div class="scroll-nav-bar">
+                    <code class="shili-box">
+                        <div class="shili">
+                            <p>示例代码:</p> <img src="./img/swiper/示例代码.png" alt="示例代码">
+                        </div>
+                        <div class="shili">
+                            <p>示例效果：</p> <img src="./img/scrollNavbar/scroll-navbar.gif" alt="示例效果">
+                        </div>
+                    </code>
+                    <h4 id="props">Props</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>参数</th>
+                                <th>说明</th>
+                                <th>类型</th>
+                                <th>可选值</th>
+                                <th>默认值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>text</td>
+                                <td>导航栏标题</td>
+                                <td>String | number []</td>
+                                <td>-</td>
+                                <td>[]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 id="methods">Methods</h4>
+
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+
 </body>
 
 </html>
