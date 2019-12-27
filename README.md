@@ -8,6 +8,29 @@
 
 **GridView 栅格布局**
 
+```javascript
+<template>
+  <div class="test">
+    <grid-view :cols="3" :v-margin="20">
+      <div v-for="item of 6" :key="item">{{ item }}</div>
+    </grid-view>
+  </div>
+</template>
+
+<script>
+import GridView from '@/components/gridview/grid-view.vue'
+export default {
+  name: 'test',
+  components: {
+    GridView
+  },
+  data() {
+    return {}
+  }
+}
+</script>
+```
+
 **Swiper 轮播图**
 
 ```javascript
