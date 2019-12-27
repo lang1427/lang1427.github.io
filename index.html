@@ -6,10 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="./style/reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 
 <body>
-    <h1>扛狼</h1>
+    <h1 class="title">Vue组件封装库</h1>
+    <div class="box">
+
+        <ul class="menu-list">
+            <li><a href="#grid-view">GridView(栅格布局)</a></li>
+            <li><a href="#swiper">swiper(轮播图)</a></li>
+            <li><a href="#scroll">scroll(封装better-scroll)</a></li>
+            <li><a href="#scroll-nav-bar">scrollNavbar(导航横向滚动)</a></li>
+        </ul>
+
+        <main class="main">
+            <button id="grid-view" class="title">grid-view</button>
+            <div class="grid-view">
+                <code class="shili-box">
+                    <div class="shili">
+                        <p>示例代码:</p> <img src="./img/gridview/示例代码.png" alt="示例代码">
+                    </div>
+                    <div class="shili">
+                        <p>示例效果：</p> <img src="./img/gridview/示例效果.png" alt="示例效果">
+                    </div>
+                </code>
+                <h4 id="props">Props</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>参数</th>
+                            <th>说明</th>
+                            <th>类型</th>
+                            <th>可选值</th>
+                            <th>默认值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>cols</td>
+                            <td>列数</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>hMargin</td>
+                            <td>GridView内边距（padding-left/right）</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>vMargin</td>
+                            <td>GridView内边距（padding-top/bottom）</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>itemSpace</td>
+                            <td>插槽元素（margin-right）</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>lineSpace</td>
+                            <td>插槽元素行距离（margin-right）</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button id="swiper" class="title">swiper</button>
+            <div class="swiper">
+                <code class="shili-box">
+                    <div class="shili">
+                        <p>示例代码:</p> <img src="./img/swiper/示例代码.png" alt="示例代码">
+                    </div>
+                    <div class="shili">
+                        <p>示例效果：</p> <img src="./img/swiper/示例效果.png" alt="示例效果">
+                    </div>
+                </code>
+                <h4 id="props">Props</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>参数</th>
+                            <th>说明</th>
+                            <th>类型</th>
+                            <th>可选值</th>
+                            <th>默认值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>cols</td>
+                            <td>列数</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>hMargin</td>
+                            <td>GridView内边距（padding-left/right）</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>vMargin</td>
+                            <td>GridView内边距（padding-top/bottom）</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>itemSpace</td>
+                            <td>插槽元素（margin-right）</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>lineSpace</td>
+                            <td>插槽元素行距离（margin-right）</td>
+                            <td>Number</td>
+                            <td>-</td>
+                            <td>8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button id="scroll" class="title"></button>
+            <div class="scroll"></div>
+
+            <button id="scroll-nav-bar" class="title"></button>
+            <div class="scroll-nav-bar"></div>
+
+        </main>
+
+    </div>
+
+
 </body>
 
 </html>
