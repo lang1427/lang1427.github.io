@@ -33,6 +33,8 @@ export default {
 
 **Swiper 轮播图**
 
+如果没有看到效果，请给 swiper 设置高度
+
 ```javascript
 <template>
   <div class="test">
@@ -69,8 +71,9 @@ export default {
 ```
 
 **Scroll**
+
 依赖于 better-scroll 插件 推荐版本 1.13.2
-使用 vue-cli3.10 + typescript 构建
+使用 vue-cli3.10 + typescript 构建 (vue-property-decorator)
 安装 better-scroll 于 @types/better-scroll
 npm install better-scroll@1.13.2 -S
 npm install @types/better-scroll
@@ -114,6 +117,7 @@ export default {
 ```
 
 **ScrollNavbar**
+
 依赖于 scroll 组件
 需要 less-loader
 安装 less-loader 和 less

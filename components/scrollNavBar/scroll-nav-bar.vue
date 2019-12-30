@@ -81,7 +81,6 @@ export default class scrollNavBar extends Vue {
   .scroll-navbar-list {
     height: 40px;
     line-height: 40px;
-    // background-color: #dede;
     border-bottom: 1px solid #ccc;
     overflow: hidden;
     display: flex; // 重要的display：flex

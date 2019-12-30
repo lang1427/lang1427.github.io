@@ -19,6 +19,7 @@ h1.title {
 }
 
 /* 左侧菜单项 */
+
 .menu-list {
     position: fixed;
     left: 0;
@@ -28,17 +29,33 @@ h1.title {
     border-right: 1px solid #666;
 }
 
+.menu-list .info {
+    border: 2px solid #666;
+    background-color: #ccc;
+    margin-top: 20px;
+}
+
 .menu-list li {
     height: 30px;
     line-height: 30px;
 }
 
+.menu-list .active {}
+
+.menu-list .active a {
+    color: red;
+    font-weight: 600;
+}
+
 .menu-list li a {
+    display: block;
+    height: 100%;
+    width: 100%;
     font-size: 14px;
 }
 
-
 /* 主题内容项 */
+
 .main {
     flex: 1;
     margin-left: 200px;
@@ -58,10 +75,19 @@ h1.title {
 
 .shili-box .shili {
     flex: 1;
-    text-align: center;
+    padding-left: 20px;
+    margin-top: 15px;
 }
 
-.shili-box .shili p {
+.shili pre {
+    margin-bottom: -60px;
+}
+
+.shili pre:last-of-type {
+    margin-bottom: 0px;
+}
+
+.shili-box .shili div {
     color: red;
     font-weight: 600;
 }
@@ -97,7 +123,6 @@ button.title:hover::after {
     transition: transform 0.45s ease-in-out;
     transform: translate3d(200%, 0, 0) rotate(35deg)
 }
-
 
 #props,
 #methods {

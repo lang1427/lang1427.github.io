@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="./css/reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/monokai-sublime.css"> <!-- highlight样式 -->
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/highlight.pack.js"></script> <!-- 支持CSS，HTML、XML，Less，TypeScript，JavaScript -->
 </head>
 
 <body>
@@ -15,8 +17,11 @@
     <div class="box">
 
         <ul class="menu-list">
-            <li><a href="#grid-view">GridView(栅格布局)</a></li>
+            <li class="active"><a href="#grid-view">GridView(栅格布局)</a></li>
             <li><a href="#swiper">swiper(轮播图)</a></li>
+            <div class="info">
+                <h3>依赖于better-scroll插件所封装的组件</h3>
+            </div>
             <li><a href="#scroll">scroll(封装better-scroll)</a></li>
             <li><a href="#scroll-nav-bar">scrollNavbar(导航横向滚动)</a></li>
         </ul>
@@ -25,14 +30,45 @@
             <div class="main-list">
                 <button id="grid-view" class="title">grid-view</button>
                 <div class="grid-view">
-                    <code class="shili-box">
+                    <div class="shili-box">
                         <div class="shili">
-                            <p>示例代码:</p> <img src="./img/gridview/示例代码.png" alt="示例代码">
+                            <div class="name">示例代码:</div>
+                            <div class="desc">
+                                <pre>
+                                    <code class="html">
+                                        &lt;template>
+                                            &lt;div class="test">
+                                                &lt;grid-view :cols="3" :v-margin="20">
+                                                    &lt;div v-for="item of 6" :key="item">{{ item }}&lt;/div>
+                                                &lt;/grid-view>
+                                            &lt;/div>
+                                        &lt;/template>           
+                                    </code>
+                                </pre>
+                                <pre>
+                                    <code class="lang-javascript">
+                                        import GridView from '@/components/gridview/grid-view.vue'
+                                            export default {
+                                                name: 'test',
+                                                components: {
+                                                    GridView
+                                                },
+                                                data() {
+                                                    return {}
+                                                }
+                                            }
+                                    </code>
+                                </pre>
+                            </div>
                         </div>
                         <div class="shili">
-                            <p>示例效果：</p> <img src="./img/gridview.gif" alt="示例效果">
+                            <div class="name">示例效果：</div>
+                            <div class="desc">
+                                <img src="./img/gridview.gif" alt="示例效果">
+                            </div>
                         </div>
-                    </code>
+                    </div>
+
                     <h4 id="props">Props</h4>
                     <table class="table">
                         <thead>
@@ -88,14 +124,59 @@
             <div class="main-list">
                 <button id="swiper" class="title">swiper</button>
                 <div class="swiper">
-                    <code class="shili-box">
+                    <div class="shili-box">
                         <div class="shili">
-                            <p>示例代码:</p> <img src="./img/swiper/示例代码.png" alt="示例代码">
+                            <div class="name">示例代码:</div>
+                            <div class="desc">
+                                <pre>
+                                        <code class="html">
+                                            &lt;template>
+                                                &lt;div class="test">
+                                                  &lt;swiper>
+                                                    &lt;swiper-item v-for="(item,index) of imgArr" :key="index">
+                                                      &lt;img :src="item" alt />
+                                                    &lt;/swiper-item>
+                                                  &lt;/swiper>
+                                                &lt;/div>
+                                              &lt;/template>           
+                                        </code>
+                                    </pre>
+                                <pre>
+                                        <code class="lang-javascript">
+                                        import Swiper from "@/components/swiper/Swiper.vue";
+                                        import SwiperItem from "@/components/swiper/SwiperItem.vue";
+                                        export default {
+                                        name: "test",
+                                        components: {
+                                            Swiper,
+                                            SwiperItem
+                                        },
+                                        data() {
+                                            return {
+                                                imgArr: [
+                                                    "http://p1.music.126.net/fdO3fFWmSUHSeMOLx-DxLA==/109951164581879063.jpg?imageView&quality=89",
+                                                    "http://p1.music.126.net/aIFBOy7IzFlcLPQf-ZQJUg==/109951164582112428.jpg?imageView&quality=89",
+                                                    "http://p1.music.126.net/VwGUPxVbd-zYABCzTys1_A==/109951164581860385.jpg?imageView&quality=89",
+                                                    "http://p1.music.126.net/zZox7T4HqdzoxGJP8leS4A==/109951164581866240.jpg?imageView&quality=89",
+                                                    "http://p1.music.126.net/InF2NLVzcuDP8xzbHAYd9A==/109951164581677405.jpg?imageView&quality=89"
+                                                ]
+                                            };
+                                        }
+                                        };
+                                        </code>
+                                    </pre>
+                            </div>
                         </div>
                         <div class="shili">
-                            <p>示例效果：</p> <img src="./img/swiper.gif" alt="示例效果">
+                            <div class="name">示例效果：</div>
+                            <div class="desc">
+                                <img src="./img/swiper.gif" alt="示例效果">
+                            </div>
                         </div>
-                    </code>
+                    </div>
+
+
+
                     <h4 id="props">Props</h4>
                     <table class="table">
                         <thead>
@@ -144,14 +225,62 @@
             <div class="main-list">
                 <button id="scroll" class="title">scroll</button>
                 <div class="scroll">
-                    <code class="shili-box">
+
+                    <div class="shili-box">
                         <div class="shili">
-                            <p>示例代码:</p> <img src="./img/swiper/示例代码.png" alt="示例代码">
+                            <div class="name">示例代码:</div>
+                            <div class="desc">
+                                <pre>
+                                        <code class="html">
+                                            &lt;template>
+                                                &lt;div class="test">
+                                                  &lt;scroll class="scroll-wrapper" :probeType="3" @scroll="scroll">
+                                                    &lt;div>
+                                                      &lt;ul>
+                                                        &lt;li v-for="item of 100" :key="item">{{ item }}&lt;/li>
+                                                      &lt;/ul>
+                                                    &lt;/div>
+                                                  &lt;/scroll>
+                                                &lt;/div>
+                                              &lt;/template>          
+                                        </code>
+                                    </pre>
+                                <pre>
+                                        <code class="lang-javascript">
+                                            import Scroll from "@/components/scroll/scroll.vue";
+                                            export default {
+                                              name: "test",
+                                              components: {
+                                                Scroll
+                                              },
+                                              methods: {
+                                                scroll(position) {
+                                                  console.log(position);
+                                                }
+                                              }
+                                            };
+                                        </code>
+                                </pre>
+                                <pre>
+                                    <code class="css">
+                                        .scroll-wrapper {
+                                            width: 100vw;
+                                            height: 300px;
+                                            overflow: hidden;
+                                            background-color: orange;
+                                          }
+                                    </code>
+                            </pre>
+                            </div>
                         </div>
                         <div class="shili">
-                            <p>示例效果：</p> <img src="./img/scroll.gif" alt="示例效果">
+                            <div class="name">示例效果：</div>
+                            <div class="desc">
+                                <img src="./img/scroll.gif" alt="示例效果">
+                            </div>
                         </div>
-                    </code>
+                    </div>
+
                     <h4 id="props">Props</h4>
                     <table class="table">
                         <thead>
@@ -202,14 +331,67 @@
             <div class="main-list">
                 <button id="scroll-nav-bar" class="title">scrollNavbar</button>
                 <div class="scroll-nav-bar">
-                    <code class="shili-box">
+
+                    <div class="shili-box">
                         <div class="shili">
-                            <p>示例代码:</p> <img src="./img/swiper/示例代码.png" alt="示例代码">
+                            <div class="name">示例代码:</div>
+                            <div class="desc">
+                                <pre>
+                                        <code class="html">
+                                            &lt;template>
+                                                &lt;div class="test">
+                                                  &lt;navbar :text="title" @changeHandler="activeItem">
+                                                    &lt;span slot="星期天">星期天&lt;/span>
+                                                    &lt;span slot="星期一">星期一&lt;/span>
+                                                    &lt;span slot="星期二">星期二&lt;/span>
+                                                    &lt;span slot="星期三">星期三&lt;/span>
+                                                    &lt;span slot="星期四">星期四&lt;/span>
+                                                    &lt;span slot="星期五">星期五&lt;/span>
+                                                    &lt;span slot="星期六">星期六&lt;/span>
+                                                  &lt;/navbar>
+                                                &lt;/div>
+                                              &lt;/template>         
+                                        </code>
+                                    </pre>
+                                <pre>
+                                        <code class="lang-javascript">
+                                        import Navbar from '@/components/scrollNavBar/scroll-nav-bar.vue'
+                                        export default {
+                                        name: 'test',
+                                        components: {
+                                            Navbar
+                                        },
+                                        data() {
+                                            return {
+                                            title: [
+                                                '星期天',
+                                                '星期一',
+                                                '星期二',
+                                                '星期三',
+                                                '星期四',
+                                                '星期五',
+                                                '星期六'
+                                            ]
+                                            }
+                                        },
+                                        methods: {
+                                            activeItem(index) {
+                                            console.log(index)
+                                            }
+                                        }
+                                        }
+                                        </code>
+                                </pre>
+                            </div>
                         </div>
                         <div class="shili">
-                            <p>示例效果：</p> <img src="./img/scroll-navbar.gif" alt="示例效果">
+                            <div class="name">示例效果：</div>
+                            <div class="desc">
+                                <img src="./img/scroll-navbar.gif" alt="示例效果">
+                            </div>
                         </div>
-                    </code>
+                    </div>
+
                     <h4 id="props">Props</h4>
                     <table class="table">
                         <thead>
