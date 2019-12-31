@@ -27,6 +27,11 @@
         </ul>
 
         <main class="main">
+
+            <div class="start">
+                <h5>若您并没有对整体的style做一个调整，请使用assets目录css下的reset.css文件</h5>
+            </div>
+
             <div class="main-list">
                 <button id="grid-view" class="title">grid-view</button>
                 <div class="grid-view">
@@ -36,27 +41,27 @@
                             <div class="desc">
                                 <pre>
                                     <code class="html">
-                                        &lt;template>
-                                            &lt;div class="test">
-                                                &lt;grid-view :cols="3" :v-margin="20">
-                                                    &lt;div v-for="item of 6" :key="item">{{ item }}&lt;/div>
-                                                &lt;/grid-view>
-                                            &lt;/div>
-                                        &lt;/template>           
+    &lt;template>
+        &lt;div class="test">
+            &lt;grid-view :cols="3" :v-margin="20">
+                &lt;div v-for="item of 6" :key="item">{{ item }}&lt;/div>
+            &lt;/grid-view>
+        &lt;/div>
+    &lt;/template>           
                                     </code>
                                 </pre>
                                 <pre>
                                     <code class="lang-javascript">
-                                        import GridView from '@/components/gridview/grid-view.vue'
-                                            export default {
-                                                name: 'test',
-                                                components: {
-                                                    GridView
-                                                },
-                                                data() {
-                                                    return {}
-                                                }
-                                            }
+    import GridView from '@/components/gridview/grid-view.vue'
+        export default {
+            name: 'test',
+            components: {
+                GridView
+            },
+            data() {
+                return {}
+            }
+        }
                                     </code>
                                 </pre>
                             </div>
@@ -123,6 +128,7 @@
 
             <div class="main-list">
                 <button id="swiper" class="title">swiper</button>
+                <span class="careful">** 如果没有看到效果，请给 swiper 设置高度 **</span>
                 <div class="swiper">
                     <div class="shili-box">
                         <div class="shili">
@@ -130,39 +136,39 @@
                             <div class="desc">
                                 <pre>
                                         <code class="html">
-                                            &lt;template>
-                                                &lt;div class="test">
-                                                  &lt;swiper>
-                                                    &lt;swiper-item v-for="(item,index) of imgArr" :key="index">
-                                                      &lt;img :src="item" alt />
-                                                    &lt;/swiper-item>
-                                                  &lt;/swiper>
-                                                &lt;/div>
-                                              &lt;/template>           
+    &lt;template>
+        &lt;div class="test">
+            &lt;swiper>
+                &lt;swiper-item v-for="(item,index) of imgArr" :key="index">
+                    &lt;img :src="item" alt />
+                &lt;/swiper-item>
+            &lt;/swiper>
+        &lt;/div>
+    &lt;/template>           
                                         </code>
                                     </pre>
                                 <pre>
                                         <code class="lang-javascript">
-                                        import Swiper from "@/components/swiper/Swiper.vue";
-                                        import SwiperItem from "@/components/swiper/SwiperItem.vue";
-                                        export default {
-                                        name: "test",
-                                        components: {
-                                            Swiper,
-                                            SwiperItem
-                                        },
-                                        data() {
-                                            return {
-                                                imgArr: [
-                                                    "http://p1.music.126.net/fdO3fFWmSUHSeMOLx-DxLA==/109951164581879063.jpg?imageView&quality=89",
-                                                    "http://p1.music.126.net/aIFBOy7IzFlcLPQf-ZQJUg==/109951164582112428.jpg?imageView&quality=89",
-                                                    "http://p1.music.126.net/VwGUPxVbd-zYABCzTys1_A==/109951164581860385.jpg?imageView&quality=89",
-                                                    "http://p1.music.126.net/zZox7T4HqdzoxGJP8leS4A==/109951164581866240.jpg?imageView&quality=89",
-                                                    "http://p1.music.126.net/InF2NLVzcuDP8xzbHAYd9A==/109951164581677405.jpg?imageView&quality=89"
-                                                ]
-                                            };
-                                        }
-                                        };
+    import Swiper from "@/components/swiper/Swiper.vue";
+    import SwiperItem from "@/components/swiper/SwiperItem.vue";
+    export default {
+        name: "test",
+        components: {
+            Swiper,
+            SwiperItem
+        },
+        data() {
+            return {
+                imgArr: [
+                    "http://p1.music.126.net/fdO3fFWmSUHSeMOLx-DxLA==/109951164581879063.jpg?imageView&quality=89",
+                    "http://p1.music.126.net/aIFBOy7IzFlcLPQf-ZQJUg==/109951164582112428.jpg?imageView&quality=89",
+                    "http://p1.music.126.net/VwGUPxVbd-zYABCzTys1_A==/109951164581860385.jpg?imageView&quality=89",
+                    "http://p1.music.126.net/zZox7T4HqdzoxGJP8leS4A==/109951164581866240.jpg?imageView&quality=89",
+                    "http://p1.music.126.net/InF2NLVzcuDP8xzbHAYd9A==/109951164581677405.jpg?imageView&quality=89"
+                ]
+            };
+        }
+    };
                                         </code>
                                     </pre>
                             </div>
@@ -224,6 +230,12 @@
 
             <div class="main-list">
                 <button id="scroll" class="title">scroll</button>
+                <b class="careful">**必须给scroll设置高度**</b>
+                <span class="careful">
+                    依赖于 better-scroll 插件 推荐版本 1.13.2<br />
+                    scroll组件开始都使用了TypeScript
+                </span>
+
                 <div class="scroll">
 
                     <div class="shili-box">
@@ -232,43 +244,43 @@
                             <div class="desc">
                                 <pre>
                                         <code class="html">
-                                            &lt;template>
-                                                &lt;div class="test">
-                                                  &lt;scroll class="scroll-wrapper" :probeType="3" @scroll="scroll">
-                                                    &lt;div>
-                                                      &lt;ul>
-                                                        &lt;li v-for="item of 100" :key="item">{{ item }}&lt;/li>
-                                                      &lt;/ul>
-                                                    &lt;/div>
-                                                  &lt;/scroll>
-                                                &lt;/div>
-                                              &lt;/template>          
+    &lt;template>
+        &lt;div class="test">
+            &lt;scroll class="scroll-wrapper" :probeType="3" @scroll="scroll">
+                &lt;div>
+                    &lt;ul>
+                        &lt;li v-for="item of 100" :key="item">{{ item }}&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+            &lt;/scroll>
+        &lt;/div>
+    &lt;/template>          
                                         </code>
                                     </pre>
                                 <pre>
                                         <code class="lang-javascript">
-                                            import Scroll from "@/components/scroll/scroll.vue";
-                                            export default {
-                                              name: "test",
-                                              components: {
-                                                Scroll
-                                              },
-                                              methods: {
-                                                scroll(position) {
-                                                  console.log(position);
-                                                }
-                                              }
-                                            };
+    import Scroll from "@/components/scroll/scroll.vue";
+    export default {
+        name: "test",
+        components: {
+            Scroll
+        },
+        methods: {
+            scroll(position) {
+                console.log(position);
+            }
+        }
+    };
                                         </code>
                                 </pre>
                                 <pre>
                                     <code class="css">
-                                        .scroll-wrapper {
-                                            width: 100vw;
-                                            height: 300px;
-                                            overflow: hidden;
-                                            background-color: orange;
-                                          }
+    .scroll-wrapper {
+        width: 100vw;
+        height: 300px;
+        overflow: hidden;
+        background-color: orange;
+    }
                                     </code>
                             </pre>
                             </div>
@@ -323,13 +335,78 @@
                             </tr>
                         </tbody>
                     </table>
-                    <h4 id="methods">Methods</h4>
-
+                    <h4 id="event">事件</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>事件名</th>
+                                <th>说明</th>
+                                <th>参数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>pullingUp</td>
+                                <td>监听是否滚动到底部（用于实现上拉加载更多） 需对pullUpLoad设置为true才起作用</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>scroll</td>
+                                <td>监听滚动的位置 需要设置probeType</td>
+                                <td>position：滚动的x和y轴的值</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 id="methods">实例方法</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>方法名</th>
+                                <th>说明</th>
+                                <th>参数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>scrollTo</td>
+                                <td>滚动到指定的位置</td>
+                                <td>{Number} x 横轴坐标（单位 px）
+                                    {Number} y 纵轴坐标（单位 px）
+                                    {Number} time 滚动动画执行的时长（单位 ms）</td>
+                            </tr>
+                            <tr>
+                                <td>refresh</td>
+                                <td>重新计算 better-scroll，当 DOM 结构发生变化的时候务必要调用确保滚动的效果正常</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>finishPullUp</td>
+                                <td>当上拉加载数据加载完毕后，需要调用此方法告诉 better-scroll 数据已加载</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>enable</td>
+                                <td>启用better-scroll</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>disable</td>
+                                <td>禁用better-scroll</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <span class="careful">更多better-scroll方法请参考 <a style="color:blue" target="_blank"
+                            href="http://ustbhuangyi.github.io/better-scroll/doc/zh-hans/#better-scroll%20%E6%98%AF%E4%BB%80%E4%B9%88">better-scroll文档</a></span>
                 </div>
             </div>
 
             <div class="main-list">
                 <button id="scroll-nav-bar" class="title">scrollNavbar</button>
+                <span class="careful">
+                    依赖于 scroll 组件<br />
+                    目前仅支持横向菜单滚动
+                </span>
                 <div class="scroll-nav-bar">
 
                     <div class="shili-box">
@@ -338,48 +415,48 @@
                             <div class="desc">
                                 <pre>
                                         <code class="html">
-                                            &lt;template>
-                                                &lt;div class="test">
-                                                  &lt;navbar :text="title" @changeHandler="activeItem">
-                                                    &lt;span slot="星期天">星期天&lt;/span>
-                                                    &lt;span slot="星期一">星期一&lt;/span>
-                                                    &lt;span slot="星期二">星期二&lt;/span>
-                                                    &lt;span slot="星期三">星期三&lt;/span>
-                                                    &lt;span slot="星期四">星期四&lt;/span>
-                                                    &lt;span slot="星期五">星期五&lt;/span>
-                                                    &lt;span slot="星期六">星期六&lt;/span>
-                                                  &lt;/navbar>
-                                                &lt;/div>
-                                              &lt;/template>         
+    &lt;template>
+        &lt;div class="test">
+            &lt;navbar :text="title" @changeHandler="activeItem">
+                &lt;span slot="星期天">星期天&lt;/span>
+                &lt;span slot="星期一">星期一&lt;/span>
+                &lt;span slot="星期二">星期二&lt;/span>
+                &lt;span slot="星期三">星期三&lt;/span>
+                &lt;span slot="星期四">星期四&lt;/span>
+                &lt;span slot="星期五">星期五&lt;/span>
+                &lt;span slot="星期六">星期六&lt;/span>
+            &lt;/navbar>
+        &lt;/div>
+    &lt;/template>         
                                         </code>
                                     </pre>
                                 <pre>
                                         <code class="lang-javascript">
-                                        import Navbar from '@/components/scrollNavBar/scroll-nav-bar.vue'
-                                        export default {
-                                        name: 'test',
-                                        components: {
-                                            Navbar
-                                        },
-                                        data() {
-                                            return {
-                                            title: [
-                                                '星期天',
-                                                '星期一',
-                                                '星期二',
-                                                '星期三',
-                                                '星期四',
-                                                '星期五',
-                                                '星期六'
-                                            ]
-                                            }
-                                        },
-                                        methods: {
-                                            activeItem(index) {
-                                            console.log(index)
-                                            }
-                                        }
-                                        }
+    import Navbar from '@/components/scrollNavBar/scroll-nav-bar.vue'
+    export default {
+        name: 'test',
+        components: {
+            Navbar
+        },
+        data() {
+            return {
+                title: [
+                    '星期天',
+                    '星期一',
+                    '星期二',
+                    '星期三',
+                    '星期四',
+                    '星期五',
+                    '星期六'
+                ]
+            }
+        },
+        methods: {
+            activeItem(index) {
+                console.log(index)
+            }
+        }
+    }
                                         </code>
                                 </pre>
                             </div>
@@ -413,8 +490,38 @@
                             </tr>
                         </tbody>
                     </table>
-                    <h4 id="methods">Methods</h4>
-
+                    <h4 id="slot">插槽</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>名称</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>slot</td>
+                                <td>对应的text的值，根据对应的值进行显示与隐藏</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4 id="event">事件</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>事件名</th>
+                                <th>说明</th>
+                                <th>参数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>changeHandler</td>
+                                <td>点击scrollNavbar所触发的事件</td>
+                                <td>index：当前点击索引值</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 

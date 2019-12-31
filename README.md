@@ -1,8 +1,18 @@
 # lang1427.github.io
 
-## Vue 移动端封装组件库
+**本人的依赖如下，如您在使用过程中，存有疑问，请提 Issues**
+
+- Vue-Cli 3.10.0+
+- 关于 Scroll 都使用了 TypeScript (vue-property-decorator)
+
+## Vue 移动端轻量级封装组件库 version 0.9
 
 访问地址 ： (https://lang1427.github.io/doc)
+
+1. GridView
+2. Swiper
+3. Scroll
+4. ScrollNavbar
 
 ### 代码片段
 
@@ -72,11 +82,11 @@ export default {
 
 **Scroll**
 
-依赖于 better-scroll 插件 推荐版本 1.13.2
-使用 vue-cli3.10 + typescript 构建 (vue-property-decorator)
-安装 better-scroll 于 @types/better-scroll
-npm install better-scroll@1.13.2 -S
-npm install @types/better-scroll
+- 依赖于 better-scroll 插件 _推荐版本_ 1.13.2
+- 安装 better-scroll 与 @types/better-scroll
+
+> npm install better-scroll@1.13.2 -S
+> npm install @types/better-scroll
 
 ```javascript
 <template>
@@ -119,9 +129,6 @@ export default {
 **ScrollNavbar**
 
 依赖于 scroll 组件
-需要 less-loader
-安装 less-loader 和 less
-npm install less-loader less -D
 
 ```javascript
 <template>

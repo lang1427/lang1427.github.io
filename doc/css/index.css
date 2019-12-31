@@ -27,6 +27,8 @@ h1.title {
     bottom: 0;
     width: 200px;
     border-right: 1px solid #666;
+    background-color: white;
+    z-index: 999;
 }
 
 .menu-list .info {
@@ -58,8 +60,21 @@ h1.title {
 
 .main {
     flex: 1;
-    margin-left: 200px;
+    padding-left: 200px;
     margin-top: 10px;
+}
+
+.main .start {
+    margin: 20px;
+    border: 1px solid #3e3e3e;
+    padding: 10px;
+}
+
+.main .careful {
+    font-size: 12px;
+    color: orangered;
+    display: block;
+    padding: 15px 15px;
 }
 
 .main .main-list {
@@ -83,9 +98,9 @@ h1.title {
     margin-bottom: -60px;
 }
 
-.shili pre:last-of-type {
+/* .shili pre:last-of-type {
     margin-bottom: 0px;
-}
+} */
 
 .shili-box .shili div {
     color: red;
@@ -125,9 +140,11 @@ button.title:hover::after {
 }
 
 #props,
+#slot,
+#event,
 #methods {
     padding-left: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .table {
