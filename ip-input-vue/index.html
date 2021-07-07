@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>vueIp demo</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./vueIp.umd.min.js"></script>
+    <link rel="stylesheet" href="./vueIp.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: antiquewhite;
+        }
+
+        #app {
+            width: 1080px;
+            text-align: center;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <demo ref="ip" @get-ip="getip"></demo>
+        <button style="margin-top:10px;width:80px;" @click="submit">提交</button>
+    </div>
+
+    <script>
+        new Vue({
+            data() {
+                return {
+                    ip: ""
+                }
+            },
+            components: {
+                demo: vueIp
+            },
+            methods: {
+                getip(_ip) {
+                    console.log(_ip)
+                    if (!!_ip) {
+                        this.ip = _ip
+                    }
+                },
+                submit() {
+                    if (!!this.$refs.ip.vaildIp()) {
+                        alert(this.ip)
+                    } else {
+                        alert('ip未输入完整')
+                    }
+                }
+            }
+        }).$mount('#app')
+    </script>
+</body>
+
+</html>
